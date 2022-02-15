@@ -19,6 +19,13 @@ export default function index() {
   const { ref: LIVE_REF, inView: LIVE_INVIEW } = useInView({
     threshold: 0,
   });
+  const { ref: CheckedBook_Ref, inView: ChekedBook_Inview } = useInView({
+    threshold: 0,
+  });
+  const { ref: InfiniteScrollBook_Ref, inView: InfiniteScrollBook_Inview } =
+    useInView({
+      threshold: 0,
+    });
   return (
     <>
       <Layout />
@@ -26,10 +33,13 @@ export default function index() {
       <MainImage />
       <Introduction />
       <LiveVideo wRef={LIVE_REF} wInView={LIVE_INVIEW} />
-      <CheckedBook />
+      <CheckedBook wRef={CheckedBook_Ref} wInView={ChekedBook_Inview} />
       <AnyTime />
       <ReadingDiary />
-      <InfiniteScrollBooks />
+      <InfiniteScrollBooks
+        wRef={InfiniteScrollBook_Ref}
+        wInView={InfiniteScrollBook_Inview}
+      />
       <Bookmarks />
       <SlideComments />
       <DownloadNow />

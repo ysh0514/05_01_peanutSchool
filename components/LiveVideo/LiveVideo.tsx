@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import styles from './LiveVideo.module.scss';
 
-export default function LiveVideo({ wRef, wInView }) {
+export default function LiveVideo({ wRef, wInView }: any) {
   const [isDown, setIsDown] = useState<boolean>(true);
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
   }, []);
-  const onScroll = (e) => {
+  const onScroll = (e: any) => {
     // console.log(window.innerHeight);
     // console.log(document.body.scrollHeight);
     const myScroll = e.srcElement.scrollingElement.scrollTop;
@@ -28,7 +28,7 @@ export default function LiveVideo({ wRef, wInView }) {
 
   // console.log('스크롤 다운중일때 :', downAnimated);
   // console.log('스크롤 올리는 중일때 :', upAnimated);
-  console.log(wInView);
+  console.log('라이브 비디오', wInView);
   return (
     <div ref={wRef} className={styles.container}>
       <div className={styles.backgroundStripe}></div>

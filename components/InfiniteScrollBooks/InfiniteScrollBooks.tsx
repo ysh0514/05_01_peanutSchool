@@ -100,16 +100,19 @@ const scrollBookImages = [
   },
 ];
 
-export default function InfiniteScrollBooks() {
-  const [isClick, setIsClick] = useState<boolean>(false);
+export default function InfiniteScrollBooks({ wRef, wInView }: any) {
+  const [isScroll, setIsScroll] = useState<boolean>(false);
 
-  const clickButton = () => {
-    setIsClick(!isClick);
-  };
+  useEffect(() => {
+    if (wInView) {
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  }, [wInView]);
 
-  console.log(isClick);
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={wRef}>
       <div className={styles.contentContainer}>
         <div className={styles.topTextWrapper}>
           <h3 className={styles.titleText}>
@@ -123,7 +126,9 @@ export default function InfiniteScrollBooks() {
         </div>
         <div className={styles.slider}>
           <div
-            className={isClick === false ? styles.nonSlideBox : styles.slideBox}
+            className={
+              isScroll === false ? styles.nonSlideBox : styles.slideBox
+            }
           >
             {scrollBookImages.map((e, idx) => {
               return (
@@ -138,7 +143,6 @@ export default function InfiniteScrollBooks() {
           </div>
         </div>
       </div>
-      <button onClick={clickButton}>클릭!!</button>
     </div>
   );
 }

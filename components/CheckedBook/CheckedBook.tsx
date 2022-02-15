@@ -1,5 +1,5 @@
 import styles from './CheckedBook.module.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const checkedImages = [
   {
@@ -22,15 +22,19 @@ const checkedImages = [
   },
 ];
 
-export default function CheckedBook() {
-  const [isClick, setIsClick] = useState(false);
+export default function CheckedBook({ wRef, wInView }: any) {
+  const [isAnimation, setIsAnimation] = useState(false);
 
-  const clickButton = () => {
-    setIsClick(!isClick);
-  };
+  useEffect(() => {
+    if (wInView) {
+      setIsAnimation(true);
+    } else {
+      setIsAnimation(false);
+    }
+  }, [wInView]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={wRef}>
       <div className={styles.contentWrapper}>
         <div className={styles.leftTextsWrapper}>
           <h3 className={styles.titleText}>
@@ -48,7 +52,7 @@ export default function CheckedBook() {
           <div className={styles.overflowWrapper}>
             <div
               className={
-                isClick === false ? styles.hiddenBox : styles.visibleBox
+                isAnimation === false ? styles.hiddenBox : styles.visibleBox
               }
             ></div>
           </div>
@@ -73,7 +77,6 @@ export default function CheckedBook() {
           </div>
         </div>
       </div>
-      <button onClick={clickButton}>클릭!</button>
     </div>
   );
 }
