@@ -1,4 +1,5 @@
 import styles from './CheckedBook.module.scss';
+import { useState } from 'react';
 
 const checkedImages = [
   {
@@ -22,6 +23,12 @@ const checkedImages = [
 ];
 
 export default function CheckedBook() {
+  const [isClick, setIsClick] = useState(false);
+
+  const clickButton = () => {
+    setIsClick(!isClick);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.contentWrapper}>
@@ -37,25 +44,36 @@ export default function CheckedBook() {
             직접 선정해요!
           </p>
         </div>
-        <div className={styles.checkedImagesWrapper}>
-          {checkedImages.map((e, idx) => {
-            return (
-              <div key={idx} className={styles.CheckAndBookWrapper}>
-                <img
-                  className={styles.checkedImage}
-                  src={e.checkImageSrc}
-                  alt={e.checkImageAlt}
-                />
-                <img
-                  className={styles.BookImage}
-                  src={e.bookImageSrc}
-                  alt={e.bookImageAlt}
-                />
-              </div>
-            );
-          })}
+        <div className={styles.rightContetWrapper}>
+          <div className={styles.overflowWrapper}>
+            <div
+              className={
+                isClick === false ? styles.hiddenBox : styles.visibleBox
+              }
+            ></div>
+          </div>
+
+          <div className={styles.checkedImagesWrapper}>
+            {checkedImages.map((e, idx) => {
+              return (
+                <div key={idx} className={styles.CheckAndBookWrapper}>
+                  <img
+                    className={styles.checkedImage}
+                    src={e.checkImageSrc}
+                    alt={e.checkImageAlt}
+                  />
+                  <img
+                    className={styles.BookImage}
+                    src={e.bookImageSrc}
+                    alt={e.bookImageAlt}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
+      <button onClick={clickButton}>클릭!</button>
     </div>
   );
 }

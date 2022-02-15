@@ -1,4 +1,5 @@
 import styles from './InfiniteScrollBooks.module.scss';
+import React, { useState, useEffect, useRef } from 'react';
 
 const scrollBookImages = [
   {
@@ -34,12 +35,79 @@ const scrollBookImages = [
     alt: '스크롤 북 이미지8',
   },
   {
-    src: './images/scrollBookImg9.png',
-    alt: '스크롤 북 이미지9',
+    src: './images/scrollBookImg1.png',
+    alt: '스크롤 북 이미지1',
+  },
+  {
+    src: './images/scrollBookImg2.png',
+    alt: '스크롤 북 이미지2',
+  },
+  {
+    src: './images/scrollBookImg3.png',
+    alt: '스크롤 북 이미지3',
+  },
+  {
+    src: './images/scrollBookImg4.png',
+    alt: '스크롤 북 이미지4',
+  },
+  {
+    src: './images/scrollBookImg5.png',
+    alt: '스크롤 북 이미지5',
+  },
+  {
+    src: './images/scrollBookImg6.png',
+    alt: '스크롤 북 이미지6',
+  },
+  {
+    src: './images/scrollBookImg7.png',
+    alt: '스크롤 북 이미지7',
+  },
+  {
+    src: './images/scrollBookImg8.png',
+    alt: '스크롤 북 이미지8',
+  },
+  {
+    src: './images/scrollBookImg1.png',
+    alt: '스크롤 북 이미지1',
+  },
+  {
+    src: './images/scrollBookImg2.png',
+    alt: '스크롤 북 이미지2',
+  },
+  {
+    src: './images/scrollBookImg3.png',
+    alt: '스크롤 북 이미지3',
+  },
+  {
+    src: './images/scrollBookImg4.png',
+    alt: '스크롤 북 이미지4',
+  },
+  {
+    src: './images/scrollBookImg5.png',
+    alt: '스크롤 북 이미지5',
+  },
+  {
+    src: './images/scrollBookImg6.png',
+    alt: '스크롤 북 이미지6',
+  },
+  {
+    src: './images/scrollBookImg7.png',
+    alt: '스크롤 북 이미지7',
+  },
+  {
+    src: './images/scrollBookImg8.png',
+    alt: '스크롤 북 이미지8',
   },
 ];
 
 export default function InfiniteScrollBooks() {
+  const [isClick, setIsClick] = useState<boolean>(false);
+
+  const clickButton = () => {
+    setIsClick(!isClick);
+  };
+
+  console.log(isClick);
   return (
     <div className={styles.container}>
       <div className={styles.contentContainer}>
@@ -53,19 +121,24 @@ export default function InfiniteScrollBooks() {
             독서를 통해 배움의 즐거움을 알아가 보세요.
           </p>
         </div>
-        <div className={styles.InfiniteScrollWrapper}>
-          {scrollBookImages.map((e, idx) => {
-            return (
-              <img
-                key={idx}
-                className={styles.scrollBookImages}
-                src={e.src}
-                alt={e.alt}
-              />
-            );
-          })}
+        <div className={styles.slider}>
+          <div
+            className={isClick === false ? styles.nonSlideBox : styles.slideBox}
+          >
+            {scrollBookImages.map((e, idx) => {
+              return (
+                <img
+                  key={idx}
+                  className={styles.scrollBookImages}
+                  src={e.src}
+                  alt={e.alt}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
+      <button onClick={clickButton}>클릭!!</button>
     </div>
   );
 }

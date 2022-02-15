@@ -26,22 +26,50 @@
         line-height: 40px;
       }
     }
-    .checkedImagesWrapper {
-      display: flex;
-      justify-content: space-between;
+    .rightContetWrapper {
       width: 650px;
+      .overflowWrapper {
+        position: absolute;
+        overflow: hidden;
+        width: 650px;
+        height: 100px;
 
-      .CheckAndBookWrapper {
-        width: 150px;
-        .checkedImage {
-          width: 150px;
+        .hiddenBox {
+          position: absolute;
+          width: 650px;
           height: 100px;
+          z-index: 1000;
+          background-color: $darkGrayBgColor;
         }
 
-        .BookImage {
-          margin-top: 33px;
+        .visibleBox {
+          position: absolute;
+          width: 650px;
+          height: 100px;
+          z-index: 1000;
+          background-color: $darkGrayBgColor;
+          transform: translateX(100%);
+          transition-duration: 2s;
+          transition-timing-function: linear;
+        }
+      }
+
+      .checkedImagesWrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .CheckAndBookWrapper {
           width: 150px;
-          height: 200px;
+          .checkedImage {
+            width: 150px;
+            height: 100px;
+          }
+
+          .BookImage {
+            margin-top: 33px;
+            width: 150px;
+            height: 200px;
+          }
         }
       }
     }

@@ -24,14 +24,54 @@
         line-height: 40px;
       }
     }
-    .InfiniteScrollWrapper {
-      margin-top: 90px;
-      display: flex;
-      justify-content: space-around;
-      .scrollBookImages {
-        width: 150px;
-        height: 200px;
+    .overflowBox {
+      // overflow: hidden;
+      .InfiniteScrollWrapper {
+        margin-top: 90px;
+        display: flex;
+
+        .scrollBookImages {
+          width: 150px;
+          height: 200px;
+          margin-right: 50px;
+        }
       }
     }
+  }
+}
+.slider {
+  overflow: hidden;
+}
+
+.nonSlideBox {
+  display: flex;
+  width: calc(200px * 16);
+  // animation: slide 14s linear;
+  margin-top: 90px;
+
+  .scrollBookImages {
+    width: 150px;
+    margin-right: 50px;
+  }
+}
+
+.slideBox {
+  display: flex;
+  width: calc(200px * 16);
+  animation: slide 14s linear infinite;
+  margin-top: 90px;
+
+  .scrollBookImages {
+    width: 150px;
+    margin-right: 50px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 8));
   }
 }
