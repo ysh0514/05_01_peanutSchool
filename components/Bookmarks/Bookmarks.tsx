@@ -1,11 +1,6 @@
+import { bookmarkMessages } from '../../constants/constants';
 import useScroll from '../../hooks/useScroll';
 import styles from './Bookmarks.module.scss';
-
-const messages = [
-  '휴대폰이나 태블릿으로\n시간이나 장소 관계없이\n편하게 수업을 들어보세요.',
-  '화면에 그림도 그려보고,\n읽은 책으로 선생님과\n퀴즈도 풀어보는 양방향\n수업을 경험해보세요.',
-  '친숙한 캐릭터와\n목소리로 수업에 대한\n부담을 낮춰보세요.',
-];
 
 export default function Bookmarks() {
   const scrollPosition = useScroll();
@@ -13,23 +8,35 @@ export default function Bookmarks() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <h2 className={scrollPosition < 5900 ? styles.title : styles.titleTransform}>땅콩스쿨만의 특징</h2>
-        <ul className={
-          // [styles.cardWrapper, scrollPosition < 6900 && scrollPosition > 6000 ? styles.leftToRight : '', scrollPosition > 6900 ? styles.rightToLeft : ''].join(" ")
-          // scrollPosition < 6956 ? [styles.cardWrapper, styles.rightToLeft].join(" ") : 
-          scrollPosition < 6000 ?
-          styles.cardWrapper
-          : scrollPosition < 6900 ?
-          styles.leftToRight : styles.rightToLeft
-        }>
-          <li className={
-            // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
-            // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") : 
-            scrollPosition < 6000 ?
-            styles.card
-            : scrollPosition < 6900 ?
-            styles.bottomToTop : styles.topToBottom
-          }>
+        <h2
+          className={
+            scrollPosition < 5900 ? styles.title : styles.titleTransform
+          }
+        >
+          땅콩스쿨만의 특징
+        </h2>
+        <ul
+          className={
+            // [styles.cardWrapper, scrollPosition < 6900 && scrollPosition > 6000 ? styles.leftToRight : '', scrollPosition > 6900 ? styles.rightToLeft : ''].join(" ")
+            // scrollPosition < 6956 ? [styles.cardWrapper, styles.rightToLeft].join(" ") :
+            scrollPosition < 6000
+              ? styles.cardWrapper
+              : scrollPosition < 6900
+              ? styles.leftToRight
+              : styles.rightToLeft
+          }
+        >
+          <li
+            className={
+              // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
+              // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") :
+              scrollPosition < 6000
+                ? styles.card
+                : scrollPosition < 6900
+                ? styles.bottomToTop
+                : styles.topToBottom
+            }
+          >
             <img
               className={styles.leftString}
               src="/images/string_left.png"
@@ -47,17 +54,20 @@ export default function Bookmarks() {
                 alt="비디오 아이콘"
               />
               <span className={styles.cardTitle}>화상 수업</span>
-              <div className={styles.description}>{messages[0]}</div>
+              <div className={styles.description}>{bookmarkMessages[0]}</div>
             </div>
           </li>
-          <li className={
-            // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
-            // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") : 
-            scrollPosition < 6000 ?
-            styles.card
-            : scrollPosition < 6900 ?
-            styles.bottomToTop : styles.topToBottom
-          }>
+          <li
+            className={
+              // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
+              // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") :
+              scrollPosition < 6000
+                ? styles.card
+                : scrollPosition < 6900
+                ? styles.bottomToTop
+                : styles.topToBottom
+            }
+          >
             <img
               className={styles.centerString}
               src="/images/string_center.png"
@@ -75,17 +85,20 @@ export default function Bookmarks() {
                 alt="양방향 아이콘"
               />
               <span className={styles.cardTitle}>양방향</span>
-              <div className={styles.description}>{messages[1]}</div>
+              <div className={styles.description}>{bookmarkMessages[1]}</div>
             </div>
           </li>
-          <li className={
-            // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
-            // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") : 
-            scrollPosition < 6000 ?
-            styles.card
-            : scrollPosition < 6900 ?
-            styles.bottomToTop : styles.topToBottom
-          }>
+          <li
+            className={
+              // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
+              // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") :
+              scrollPosition < 6000
+                ? styles.card
+                : scrollPosition < 6900
+                ? styles.bottomToTop
+                : styles.topToBottom
+            }
+          >
             <img
               className={styles.rightStirng}
               src="/images/string_right.png"
@@ -103,7 +116,7 @@ export default function Bookmarks() {
                 alt="캐릭터 아이콘"
               />
               <span className={styles.cardTitle}>캐릭터</span>
-              <div className={styles.description}>{messages[2]}</div>
+              <div className={styles.description}>{bookmarkMessages[2]}</div>
             </div>
           </li>
         </ul>
