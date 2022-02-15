@@ -1,34 +1,104 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 배포 주소
 
-## Getting Started
+<a href=https://05-01-peanut-school-lam3z4as6-preonboarding-team14.vercel.app/>데시보드 페이지</a>
 
-First, run the development server:
+## 💻 설치 방법
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+    npm install
+    npm run dev
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 파일 구조
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+components     
+ ┣ AnyTime         
+ ┃ ┣ AnyTime.module.scss       
+ ┃ ┗ AnyTime.tsx       
+ ┣ Bookmarks       
+ ┃ ┣ Bookmarks.module.scss       
+ ┃ ┗ Bookmarks.tsx          
+ ┣ CheckedBook       
+ ┃ ┣ CheckedBook.module.scss      
+ ┃ ┗ CheckedBook.tsx      
+ ┣ DownloadButton           
+ ┃ ┣ DownLoadButton.module.scss     
+ ┃ ┗ DownloadButton.tsx       
+ ┣ DownloadNow       
+ ┃ ┣ DownloadNow.module.scss      
+ ┃ ┗ DownloadNow.tsx      
+ ┣ ErrorPage      
+ ┃ ┣ ErrorPage.module.scss             
+ ┃ ┗ ErrorPage.tsx         
+ ┣ Footer      
+ ┃ ┣ Footer.module.scss        
+ ┃ ┗ Footer.tsx      
+ ┣ InfiniteScrollBooks        
+ ┃ ┣ InfiniteScrollBooks.module.scss    
+ ┃ ┗ InfiniteScrollBooks.tsx     
+ ┣ Introduction       
+ ┃ ┣ Introduction.module.scss         
+ ┃ ┗ Introduction.tsx       
+ ┣ Layout     
+ ┃ ┗ Layout.tsx           
+ ┣ LiveVideo             
+ ┃ ┣ LiveVideo.module.scss       
+ ┃ ┗ LiveVideo.tsx      
+ ┣ MainImage       
+ ┃ ┣ MainImage.module.scss       
+ ┃ ┗ MainImage.tsx      
+ ┣ NavBar       
+ ┃ ┣ NavBar.module.scss      
+ ┃ ┗ NavBar.tsx      
+ ┣ ReadingDiary      
+ ┃ ┣ ReadingDiary.module.scss    
+ ┃ ┗ ReadingDiary.tsx       
+ ┗ SlideComments      
+ ┃ ┣ SlideComments.module.scss      
+ ┃ ┗ SlideComments.tsx     
+ constants    
+ ┗ constants.ts     
+ hooks      
+ ┗ useScroll.tsx
+ pages   
+ ┣ api      
+ ┃ ┗ hello.ts      
+ ┣ _app.tsx     
+ ┗ index.tsx     
+ styles    
+ ┣ Home.module.css     
+ ┣ globals.css      
+ ┗ variables.module.scss    
+ styles
+ ┣ Home.module.css     
+ ┣ globals.css     
+ ┗ variables.module.scss     
+## 📋개발 진행 상황 공유
+<img width="876" alt="스크린샷 2022-02-16 오전 2 18 02" src="https://user-images.githubusercontent.com/91244500/154114463-226e49ce-5126-4f4f-8c0f-ecfc768f6a7e.png">
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 프로젝트 과정 소개
 
-## Learn More
+| 슬랙을 이용한 소통                                                                                                             |                                                       게더를 활용한 소통                                                       |
+| :----------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: |
+| <img width="auto" src="https://user-images.githubusercontent.com/80146176/153052997-f2ca6637-40f8-4e7f-9609-f4885577706a.png"> | <img width="auto" src="https://user-images.githubusercontent.com/80146176/153053947-7be40938-62f8-4dd9-a54b-7328ea550546.png"> |
+| 노션에서의 소통                                                                                                                |                                                     화면공유를 활용한 소통                                                     |
+| <img width="auto" src="https://user-images.githubusercontent.com/80146176/153054588-6194940a-a76d-4fde-a164-2efb3989d6e8.png"> | <img width="auto" src="https://user-images.githubusercontent.com/80146176/153054110-d7c4169e-3824-4903-8ca5-fc4aec044055.png"> |
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 기능
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 북 체크
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-  화면 진입 시 책 이미지 상단의 체크 이미지를 overflow : hidden 을 사용하여 가려져 있던 이미지가 노출되도록 구현.
+- transform , transition 속성을 사용하여 애니메이션 효과를 부여.
 
-## Deploy on Vercel
+### 스크롤 북 이미지
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 화면 진입 시 나열되어 있는 책 이미지들이 우에서 좌로 무한히 흐르는 로직 구현. animation: slide 14s linear infinite; 와 같은 속성 사용.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 다운로드 나우 버튼
+
+- 화면 진입 시 두개의 이미지가 setTimeOut 함수에 의해 시간차를 두고 애니메이션 효과가 실행되도록 구현.
+
+### 라이브 비디오
+
+- video 태그의 속성을 활용하여 , 음소거 , 컨트롤 요소 삭제 , 반복재생 화면 진입 시 자동재생 구현.
+
