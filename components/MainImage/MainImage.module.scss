@@ -21,34 +21,6 @@
     top: 0;
     z-index: -1000;
   }
-  .imageText {
-    width: 1140px;
-    position: relative;
-    h1 {
-      padding-top: 230px;
-      width: 424px;
-      height: 247px;
-      font-size: $bigTitleFontSize;
-      line-height: 80px;
-      font-weight: bold;
-      color: #fff;
-    }
-    .starImage {
-      position: absolute;
-      top: 65px;
-      left: -20px;
-      height: 52.18px;
-      padding-top: 230px;
-      width: 51.42px;
-    }
-    .lineImage {
-      padding-top: 230px;
-      position: absolute;
-      top: 155px;
-      width: 240px;
-      height: 11px;
-    }
-  }
   .mouseImage {
     width: 44px;
     height: 44px;
@@ -57,4 +29,40 @@
     padding-bottom: 50px;
     animation: 0.7s ease-in 0s infinite alternate none running motion;
   }
+}
+
+.imageText {
+  width: 1140px;
+  position: relative;
+  transition: 1s;
+  h1 {
+    padding-top: 230px;
+    width: 424px;
+    height: 247px;
+    font-size: $bigTitleFontSize;
+    line-height: 80px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .starImage {
+    position: absolute;
+    top: 65px;
+    left: -20px;
+    height: 52.18px;
+    padding-top: 230px;
+    width: 51.42px;
+  }
+  .lineImage {
+    padding-top: 230px;
+    position: absolute;
+    top: 155px;
+    width: 240px;
+    height: 11px;
+  }
+}
+
+.textTransform {
+  @extend .imageText;
+  top: 200px;
+  transform: translateY(-200px);
 }
