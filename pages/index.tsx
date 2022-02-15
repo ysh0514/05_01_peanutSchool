@@ -1,12 +1,15 @@
-import AnyTime from "../components/AnyTime/AnyTime";
-import styles from "../styles/variables.module.scss";
+import AnyTime from '../components/AnyTime/AnyTime';
+import Bookmarks from '../components/Bookmarks/Bookmarks';
+import Footer from '../components/Footer/Footer';
+import Introduction from '../components/Introduction/Introduction';
+import SlideComments from '../components/SlideComments/SlideComments';
 
 export default function index() {
   return (
-    <div>
-      index 왜 언돼
-      <header>우리 사이트에 땅콩스쿨에 오신걸 환영합니다</header>
-      <AnyTime></AnyTime>
-    </div>
+    <>
+      <SlideComments />
+      <Introduction></Introduction>
+      <Bookmarks></Bookmarks>
+    </>
   );
 }

@@ -1,0 +1,128 @@
+@import '../../styles/variables.module.scss';
+
+.container {
+  height: 703px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+}
+
+.overlayImg {
+  @extend .overlay;
+}
+
+.overlayBlack {
+  @extend .overlay;
+  background-color: #000000;
+  opacity: 0.7;
+}
+
+.contentWrapper {
+  z-index: 1;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 1500px;
+  height: inherit;
+}
+
+.arrowFlex {
+  position: absolute;
+  width: 1500px;
+  height: 703px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrowContainer {
+  width: 32px;
+  height: 32px;
+  border: 2px solid $whiteColor;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrowImg {
+  height: 18px;
+  position: relative;
+}
+
+.leftArrowImg {
+  @extend .arrowImg;
+  right: 1px;
+}
+
+.rightArrowImg {
+  @extend .arrowImg;
+  left: 1px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 159px;
+}
+
+.childImg {
+  width: 116.6px;
+  height: 116.6px;
+  position: absolute;
+}
+
+.yellowLogo {
+  height: 116.6px;
+  position: relative;
+  right: 28px;
+}
+
+.contentText {
+  color: $whiteColor;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.author {
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $verySamllFontSize;
+  line-height: 28px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.review {
+  margin-top: 50px;
+  white-space: pre-wrap;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $smallFontSize;
+  line-height: 32px;
+}
+
+.slideIndex {
+  width: 100%;
+  display: flex;
+  align-self: flex-end;
+  z-index: 2;
+  position: absolute;
+}
+
+.yellowIndex {
+  background-color: $keyYellowColor;
+  width: 20%;
+  height: 11px;
+}
