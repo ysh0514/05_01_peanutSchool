@@ -15,12 +15,10 @@ import ReadingDiary from '../components/ReadingDiary/ReadingDiary';
 import SlideComments from '../components/SlideComments/SlideComments';
 
 export default function index() {
-  const { ref: MainImage_Ref, inView: MainImage_Inview } =
-    useInView({
+  const { ref: MainImage_Ref, inView: MainImage_Inview } = useInView({
     threshold: 0,
   });
-  const { ref: Introduction_Ref, inView: Introduction_Inview } =
-    useInView({
+  const { ref: Introduction_Ref, inView: Introduction_Inview } = useInView({
     threshold: 0,
   });
   const { ref: LIVE_REF, inView: LIVE_INVIEW } = useInView({
@@ -37,16 +35,14 @@ export default function index() {
   });
   const { ref: InfiniteScrollBook_Ref, inView: InfiniteScrollBook_Inview } =
     useInView({
-    threshold: 0,
-  });
-  const { ref: DownloadNow_Ref, inView: DownloadNow_Inview } =
-    useInView({
+      threshold: 0,
+    });
+  const { ref: DownloadNow_Ref, inView: DownloadNow_Inview } = useInView({
     threshold: 0,
   });
   return (
     <>
       <Layout />
-      <NavBar />
       <MainImage wRef={MainImage_Ref} wInView={MainImage_Inview} />
       <Introduction wRef={Introduction_Ref} wInView={Introduction_Inview} />
       <LiveVideo wRef={LIVE_REF} wInView={LIVE_INVIEW} />
