@@ -20,7 +20,6 @@
     width: 100%;
     text-align: center;
     .overflowBox {
-      // overflow: hidden;
       .InfiniteScrollWrapper {
         margin-top: 90px;
         display: flex;
@@ -63,7 +62,6 @@
 .nonSlideBox {
   display: flex;
   width: calc(200px * 16);
-  // animation: slide 14s linear;
   margin-top: 90px;
 
   .scrollBookImages {
