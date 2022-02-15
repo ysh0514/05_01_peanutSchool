@@ -1,3 +1,4 @@
+import useScroll from '../../hooks/useScroll';
 import styles from './Bookmarks.module.scss';
 
 const messages = [
@@ -7,12 +8,28 @@ const messages = [
 ];
 
 export default function Bookmarks() {
+  const scrollPosition = useScroll();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <h2 className={styles.title}>땅콩스쿨만의 특징</h2>
-        <ul className={styles.cardWrapper}>
-          <li className={styles.card}>
+        <h2 className={scrollPosition < 5900 ? styles.title : styles.titleTransform}>땅콩스쿨만의 특징</h2>
+        <ul className={
+          // [styles.cardWrapper, scrollPosition < 6900 && scrollPosition > 6000 ? styles.leftToRight : '', scrollPosition > 6900 ? styles.rightToLeft : ''].join(" ")
+          // scrollPosition < 6956 ? [styles.cardWrapper, styles.rightToLeft].join(" ") : 
+          scrollPosition < 6000 ?
+          styles.cardWrapper
+          : scrollPosition < 6900 ?
+          styles.leftToRight : styles.rightToLeft
+        }>
+          <li className={
+            // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
+            // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") : 
+            scrollPosition < 6000 ?
+            styles.card
+            : scrollPosition < 6900 ?
+            styles.bottomToTop : styles.topToBottom
+          }>
             <img
               className={styles.leftString}
               src="/images/string_left.png"
@@ -33,7 +50,14 @@ export default function Bookmarks() {
               <div className={styles.description}>{messages[0]}</div>
             </div>
           </li>
-          <li className={styles.card}>
+          <li className={
+            // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
+            // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") : 
+            scrollPosition < 6000 ?
+            styles.card
+            : scrollPosition < 6900 ?
+            styles.bottomToTop : styles.topToBottom
+          }>
             <img
               className={styles.centerString}
               src="/images/string_center.png"
@@ -54,7 +78,14 @@ export default function Bookmarks() {
               <div className={styles.description}>{messages[1]}</div>
             </div>
           </li>
-          <li className={styles.card}>
+          <li className={
+            // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
+            // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") : 
+            scrollPosition < 6000 ?
+            styles.card
+            : scrollPosition < 6900 ?
+            styles.bottomToTop : styles.topToBottom
+          }>
             <img
               className={styles.rightStirng}
               src="/images/string_right.png"
