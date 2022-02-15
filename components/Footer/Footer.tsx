@@ -24,12 +24,12 @@ export default function Footer() {
           <ul className={styles.information}>
             <li className={styles.infoList}>
               <span className={styles.infoItem}>고객센터</span>
-              <span>채팅상담</span>
+              <span className={styles.infoCursur}>채팅상담</span>
             </li>
             <li className={styles.infoList}>
               <span className={styles.infoItem}>이용약관</span>
               <span className={styles.privateInfo}>개인정보 처리방침</span>
-              <span>환불정책</span>
+              <span className={styles.infoCursur}>환불정책</span>
             </li>
             <li className={styles.iconList}>
               <div className={styles.icon}>

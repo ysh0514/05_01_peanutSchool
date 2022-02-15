@@ -56,12 +56,18 @@
 }
 
 .infoItem {
+  cursor: pointer;
   margin-right: 20px;
+}
+
+.infoCursur {
+  cursor: pointer;
 }
 
 .privateInfo {
   @extend .infoItem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .iconList {
@@ -70,6 +76,7 @@
 }
 
 .icon {
+  cursor: pointer;
   width: 43px;
   height: 43px;
   border-radius: 50%;

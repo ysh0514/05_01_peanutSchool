@@ -10,6 +10,7 @@
   color: #fff;
   z-index: 100;
   position: fixed;
+  transition: all 0.5s ease-in-out;
   .header {
     display: flex;
     justify-content: space-between;
