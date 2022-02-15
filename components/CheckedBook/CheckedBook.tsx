@@ -38,9 +38,9 @@ export default function CheckedBook() {
           </p>
         </div>
         <div className={styles.checkedImagesWrapper}>
-          {checkedImages.map((e) => {
+          {checkedImages.map((e, idx) => {
             return (
-              <div className={styles.CheckAndBookWrapper}>
+              <div key={idx} className={styles.CheckAndBookWrapper}>
                 <img
                   className={styles.checkedImage}
                   src={e.checkImageSrc}

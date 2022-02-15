@@ -54,9 +54,10 @@ export default function InfiniteScrollBooks() {
           </p>
         </div>
         <div className={styles.InfiniteScrollWrapper}>
-          {scrollBookImages.map((e) => {
+          {scrollBookImages.map((e, idx) => {
             return (
               <img
+                key={idx}
                 className={styles.scrollBookImages}
                 src={e.src}
                 alt={e.alt}
