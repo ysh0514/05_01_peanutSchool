@@ -1,3 +1,4 @@
+import { useInView } from 'react-intersection-observer';
 import AnyTime from '../components/AnyTime/AnyTime';
 import Bookmarks from '../components/Bookmarks/Bookmarks';
 import CheckedBook from '../components/CheckedBook/CheckedBook';
@@ -15,18 +16,21 @@ import ReadingDiary from '../components/ReadingDiary/ReadingDiary';
 import SlideComments from '../components/SlideComments/SlideComments';
 
 export default function index() {
+  const { ref: LIVE_REF, inView: LIVE_INVIEW } = useInView({
+    threshold: 0,
+  });
   return (
     <>
-      {/* <Layout />
+      <Layout />
       <NavBar />
       <MainImage />
       <Introduction />
-      <LiveVideo />
+      <LiveVideo wRef={LIVE_REF} wInView={LIVE_INVIEW} />
       <CheckedBook />
       <AnyTime />
       <ReadingDiary />
       <InfiniteScrollBooks />
-      <Bookmarks /> */}
+      <Bookmarks />
       <SlideComments />
       <DownloadNow />
       <Footer />

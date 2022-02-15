@@ -34,6 +34,7 @@ const PREV = 'prev';
 
 export default function SlideComments() {
   const contentRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState<number>(0);
   const [isSliding, setIsSliding] = useState<boolean>(false);
   const [x, setX] = useState<number>(0);
@@ -147,7 +148,7 @@ export default function SlideComments() {
   const nextIndex = index === 4 ? 0 : index + 1;
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={scrollRef}>
       <img
         className={styles.overlayImg}
         src="/images/overlay.png"
