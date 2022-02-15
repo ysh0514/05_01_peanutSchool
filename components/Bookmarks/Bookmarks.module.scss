@@ -24,6 +24,16 @@
   font-size: $titleFontSize;
   line-height: 70px;
   margin-bottom: 80px;
+  position: relative;
+  opacity: 0;
+}
+
+.titleTransform {
+  @extend .title;
+  top: 100px;
+  opacity: 1;
+  transition: 0.8s;
+  transform: translateY(-100px);
 }
 
 .cardWrapper {
@@ -33,10 +43,52 @@
   left: 20px;
 }
 
+.leftToRight {
+  @extend .cardWrapper;
+  :first-child {
+    transition: 0.8s;
+  }
+  :nth-child(2) {
+    transition: 1.3s;
+  }
+  :last-child {
+    transition: 1.8s;
+  }
+}
+
+.rightToLeft {
+  @extend .cardWrapper;
+  :first-child {
+    transition: 2.8s;
+  }
+  :nth-child(2) {
+    transition: 2.3s;
+  }
+  :last-child {
+    transition: 1.8s;
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  opacity: 0;
+}
+
+.bottomToTop {
+  @extend .card;
+  top: 100px;
+  opacity: 1;
+  transform: translateY(-100px);
+}
+
+.topToBottom {
+  @extend .card;
+  top: -100px;
+  opacity: 1;
+  transform: translateY(100px);
 }
 
 .string {
