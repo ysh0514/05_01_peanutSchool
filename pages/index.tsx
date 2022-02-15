@@ -17,7 +17,7 @@ import SlideComments from '../components/SlideComments/SlideComments';
 export default function index() {
   return (
     <>
-      <Layout />
+      {/* <Layout />
       <NavBar />
       <MainImage />
       <Introduction />
@@ -26,7 +26,7 @@ export default function index() {
       <AnyTime />
       <ReadingDiary />
       <InfiniteScrollBooks />
-      <Bookmarks />
+      <Bookmarks /> */}
       <SlideComments />
       <DownloadNow />
       <Footer />
