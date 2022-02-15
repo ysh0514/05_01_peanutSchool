@@ -5,11 +5,5 @@ import Introduction from '../components/Introduction/Introduction';
 import SlideComments from '../components/SlideComments/SlideComments';
 
 export default function index() {
-  return (
-    <>
-      <SlideComments />
-      <Introduction></Introduction>
-      <Bookmarks></Bookmarks>
-    </>
-  );
+  return <></>;
 }
