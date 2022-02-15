@@ -1,26 +1,26 @@
 import styles from './DownloadNow.module.scss';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function DownloadNow({ wRef, wInView }: any) {
   const [isClick, setIsClick] = useState<boolean>(false);
   const [speechBubble, setSpeechBubble] = useState<boolean>(false);
 
-  const click = () => {
-    if (!isClick) {
-      setIsClick(!isClick);
+  useEffect(() => {
+    if (wInView) {
+      setIsClick(true);
       setTimeout(() => {
-        setSpeechBubble(!speechBubble);
-      }, 900);
+        setSpeechBubble(true);
+      }, 700);
     } else {
-      setIsClick(!isClick);
-      setSpeechBubble(!speechBubble);
+      setIsClick(false);
+      setSpeechBubble(false);
     }
-  };
+  }, [wInView]);
 
-  console.log(isClick);
+  console.log(wInView);
   return (
     <>
-      <section className={styles.downloadContainer}>
+      <section className={styles.downloadContainer} ref={wRef}>
         <h1>지금 다운로드 받으세요!</h1>
         <div className={styles.couponWrapper}>
           <img className={styles.coupon} src="/images/coupon.png" alt="쿠폰" />
@@ -43,7 +43,6 @@ export default function DownloadNow({ wRef, wInView }: any) {
           />
         </div>
       </section>
-      <button onClick={click}>클릭</button>
     </>
   );
 }
