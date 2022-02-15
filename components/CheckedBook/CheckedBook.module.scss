@@ -49,7 +49,8 @@
           z-index: 1000;
           background-color: $darkGrayBgColor;
           transform: translateX(100%);
-          transition-duration: 2.8s;
+          transition-duration: 2s;
+          transition-timing-function: linear;
         }
       }
 

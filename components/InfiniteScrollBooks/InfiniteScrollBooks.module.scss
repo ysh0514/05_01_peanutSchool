@@ -42,10 +42,11 @@
 .slider {
   overflow: hidden;
 }
-.slideBox {
+
+.nonSlideBox {
   display: flex;
   width: calc(200px * 16);
-  animation: slide 10s linear infinite;
+  // animation: slide 14s linear;
   margin-top: 90px;
 
   .scrollBookImages {
@@ -53,17 +54,18 @@
     margin-right: 50px;
   }
 }
-// .slideItems {
-//   width: 300px;
-//   height: 100px;
-//   background-color: #2d2d2d;
-//   border: 2px solid #68c7df;
-//   box-sizing: border-box;
-//   font-size: 24px;
-//   color: #68c7df;
-//   line-height: 100px;
-//   text-align: center;
-// }
+
+.slideBox {
+  display: flex;
+  width: calc(200px * 16);
+  animation: slide 14s linear infinite;
+  margin-top: 90px;
+
+  .scrollBookImages {
+    width: 150px;
+    margin-right: 50px;
+  }
+}
 
 @keyframes slide {
   0% {
