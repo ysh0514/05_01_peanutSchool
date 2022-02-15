@@ -1,8 +1,20 @@
+import { useEffect, useState } from 'react';
+import { InViewProps } from '../../utils/inViewType';
 import styles from './MainImage.module.scss';
 
-export default function MainImage() {
+export default function MainImage({ wRef, wInView }: InViewProps) {
+  const [isAnimation, setIsAnimation] = useState(false);
+
+  useEffect(() => {
+    if (wInView) {
+      setIsAnimation(true);
+    } else {
+      setIsAnimation(false);
+    }
+  }, [wInView]);
+
   return (
-    <div className={styles.imageContainer}>
+    <div className={styles.imageContainer} ref={wRef}>
       <img 
         src='/images/main_image_background.png'
         alt='메인 배경 이미지' 
@@ -11,7 +23,7 @@ export default function MainImage() {
         src='/images/main_image_child.png' 
         alt='메인 배경 이미지' 
       />
-      <div className={styles.imageText}>
+      <div className={!isAnimation ? styles.imageText : styles.textTransform}>
         <h1>
           책 읽는 재미, 
           <br/> 

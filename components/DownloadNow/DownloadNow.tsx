@@ -1,17 +1,21 @@
-import styles from './DownloadNow.module.scss';
 import React, { useState, useEffect } from 'react';
+import { InViewProps } from '../../utils/inViewType';
+import styles from './DownloadNow.module.scss';
 
-export default function DownloadNow({ wRef, wInView }: any) {
+export default function DownloadNow({ wRef, wInView }: InViewProps) {
   const [isClick, setIsClick] = useState<boolean>(false);
   const [speechBubble, setSpeechBubble] = useState<boolean>(false);
+  const [isAnimation, setIsAnimation] = useState(false);
 
   useEffect(() => {
     if (wInView) {
+      setIsAnimation(true);
       setIsClick(true);
       setTimeout(() => {
         setSpeechBubble(true);
       }, 700);
     } else {
+      setIsAnimation(false);
       setIsClick(false);
       setSpeechBubble(false);
     }
@@ -21,7 +25,7 @@ export default function DownloadNow({ wRef, wInView }: any) {
   return (
     <>
       <section className={styles.downloadContainer} ref={wRef}>
-        <h1>지금 다운로드 받으세요!</h1>
+        <h1 className={!isAnimation ? styles.title : styles.titleTransform}>지금 다운로드 받으세요!</h1>
         <div className={styles.couponWrapper}>
           <img className={styles.coupon} src="/images/coupon.png" alt="쿠폰" />
           <img
