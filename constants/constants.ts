@@ -1,5 +1,3 @@
-const a = 'a';
-
 export const commentsMessages = [
   {
     id: 'dahyedahyunmom_amiejjerry',
@@ -34,4 +32,136 @@ export const bookmarkMessages = [
   '휴대폰이나 태블릿으로\n시간이나 장소 관계없이\n편하게 수업을 들어보세요.',
   '화면에 그림도 그려보고,\n읽은 책으로 선생님과\n퀴즈도 풀어보는 양방향\n수업을 경험해보세요.',
   '친숙한 캐릭터와\n목소리로 수업에 대한\n부담을 낮춰보세요.',
+];
+
+interface scrollBookImagesProps {
+  src: string;
+  alt: string;
+}
+
+export const scrollBookImages: Array<scrollBookImagesProps> = [
+  {
+    src: './images/scrollBookImg1.png',
+    alt: '스크롤 북 이미지1',
+  },
+  {
+    src: './images/scrollBookImg2.png',
+    alt: '스크롤 북 이미지2',
+  },
+  {
+    src: './images/scrollBookImg3.png',
+    alt: '스크롤 북 이미지3',
+  },
+  {
+    src: './images/scrollBookImg4.png',
+    alt: '스크롤 북 이미지4',
+  },
+  {
+    src: './images/scrollBookImg5.png',
+    alt: '스크롤 북 이미지5',
+  },
+  {
+    src: './images/scrollBookImg6.png',
+    alt: '스크롤 북 이미지6',
+  },
+  {
+    src: './images/scrollBookImg7.png',
+    alt: '스크롤 북 이미지7',
+  },
+  {
+    src: './images/scrollBookImg8.png',
+    alt: '스크롤 북 이미지8',
+  },
+  {
+    src: './images/scrollBookImg1.png',
+    alt: '스크롤 북 이미지1',
+  },
+  {
+    src: './images/scrollBookImg2.png',
+    alt: '스크롤 북 이미지2',
+  },
+  {
+    src: './images/scrollBookImg3.png',
+    alt: '스크롤 북 이미지3',
+  },
+  {
+    src: './images/scrollBookImg4.png',
+    alt: '스크롤 북 이미지4',
+  },
+  {
+    src: './images/scrollBookImg5.png',
+    alt: '스크롤 북 이미지5',
+  },
+  {
+    src: './images/scrollBookImg6.png',
+    alt: '스크롤 북 이미지6',
+  },
+  {
+    src: './images/scrollBookImg7.png',
+    alt: '스크롤 북 이미지7',
+  },
+  {
+    src: './images/scrollBookImg8.png',
+    alt: '스크롤 북 이미지8',
+  },
+  {
+    src: './images/scrollBookImg1.png',
+    alt: '스크롤 북 이미지1',
+  },
+  {
+    src: './images/scrollBookImg2.png',
+    alt: '스크롤 북 이미지2',
+  },
+  {
+    src: './images/scrollBookImg3.png',
+    alt: '스크롤 북 이미지3',
+  },
+  {
+    src: './images/scrollBookImg4.png',
+    alt: '스크롤 북 이미지4',
+  },
+  {
+    src: './images/scrollBookImg5.png',
+    alt: '스크롤 북 이미지5',
+  },
+  {
+    src: './images/scrollBookImg6.png',
+    alt: '스크롤 북 이미지6',
+  },
+  {
+    src: './images/scrollBookImg7.png',
+    alt: '스크롤 북 이미지7',
+  },
+  {
+    src: './images/scrollBookImg8.png',
+    alt: '스크롤 북 이미지8',
+  },
+];
+
+interface checkedImagesProps {
+  bookImageSrc: string;
+  bookImageAlt: string;
+  checkImageSrc: string;
+  checkImageAlt: string;
+}
+
+export const checkedImages: Array<checkedImagesProps> = [
+  {
+    bookImageSrc: './images/img_book_1.png',
+    bookImageAlt: '책 이미지1',
+    checkImageSrc: './images/checkImg1.png',
+    checkImageAlt: '체크 이미지1',
+  },
+  {
+    bookImageSrc: './images/img_book_2.png',
+    bookImageAlt: '책 이미지2',
+    checkImageSrc: './images/checkImg2.png',
+    checkImageAlt: '체크 이미지2',
+  },
+  {
+    bookImageSrc: './images/img_book_3.png',
+    bookImageAlt: '책 이미지3',
+    checkImageSrc: './images/checkImg3.png',
+    checkImageAlt: '체크 이미지3',
+  },
 ];

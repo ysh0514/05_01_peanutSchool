@@ -17,8 +17,6 @@ export default function Bookmarks() {
         </h2>
         <ul
           className={
-            // [styles.cardWrapper, scrollPosition < 6900 && scrollPosition > 6000 ? styles.leftToRight : '', scrollPosition > 6900 ? styles.rightToLeft : ''].join(" ")
-            // scrollPosition < 6956 ? [styles.cardWrapper, styles.rightToLeft].join(" ") :
             scrollPosition < 6000
               ? styles.cardWrapper
               : scrollPosition < 6900
@@ -28,8 +26,6 @@ export default function Bookmarks() {
         >
           <li
             className={
-              // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
-              // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") :
               scrollPosition < 6000
                 ? styles.card
                 : scrollPosition < 6900
@@ -59,8 +55,6 @@ export default function Bookmarks() {
           </li>
           <li
             className={
-              // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
-              // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") :
               scrollPosition < 6000
                 ? styles.card
                 : scrollPosition < 6900
@@ -90,8 +84,6 @@ export default function Bookmarks() {
           </li>
           <li
             className={
-              // [styles.card, scrollPosition < 6900 && scrollPosition > 6000 ? styles.bottomToTop : '', scrollPosition > 6900 ? styles.topToBottom : ''].join(" ")
-              // scrollPosition < 6956 ? [styles.card, styles.topToBottom].join(" ") :
               scrollPosition < 6000
                 ? styles.card
                 : scrollPosition < 6900

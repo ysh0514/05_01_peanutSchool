@@ -53,8 +53,8 @@ export default function SlideComments() {
     }
   };
 
-  function useInterval(callback: undefined, delay: number) {
-    const savedCallback = useRef();
+  function useInterval(callback: HTMLDivElement | any, delay: number) {
+    const savedCallback = useRef<HTMLDivElement | any>();
     useEffect(() => {
       savedCallback.current = callback;
     }, [callback]);

@@ -4,14 +4,14 @@ import styles from './LiveVideo.module.scss';
 
 export default function LiveVideo({ wRef, wInView }: InViewProps) {
   const [isAnimation, setIsAnimation] = useState(false);
-  const vidRef: any = useRef(null);
+  const vidRef = useRef<HTMLVideoElement>(null);
 
   const playVideo = () => {
-    vidRef.current.play();
+    vidRef.current?.play();
   };
 
   const pauseVideo = () => {
-    vidRef.current.pause();
+    vidRef.current?.pause();
   };
 
   useEffect(() => {
@@ -28,11 +28,23 @@ export default function LiveVideo({ wRef, wInView }: InViewProps) {
     <div ref={wRef} className={styles.container}>
       <div className={styles.backgroundStripe}></div>
       <div className={styles.contentWrapper}>
-        <div className={!isAnimation ? styles.leftTextsWrapper : styles.textTransition}>
-          <h3 className={!isAnimation ? styles.titleText : styles.titleTransform}>
+        <div
+          className={
+            !isAnimation ? styles.leftTextsWrapper : styles.textTransition
+          }
+        >
+          <h3
+            className={!isAnimation ? styles.titleText : styles.titleTransform}
+          >
             랜선 라이브 <br></br>북클래스
           </h3>
-          <p className={!isAnimation ? styles.descriptionText : styles.descriptionTransform}>
+          <p
+            className={
+              !isAnimation
+                ? styles.descriptionText
+                : styles.descriptionTransform
+            }
+          >
             친구들과 함께<br></br>
             그림 그리기 , 퀴즈풀기.
             <br></br>
