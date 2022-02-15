@@ -1,4 +1,4 @@
-import styles from './DownloadButton.module.scss';
+import styles from './DownLoadButton.module.scss';
 
 export default function DownloadButton() {
   return (
