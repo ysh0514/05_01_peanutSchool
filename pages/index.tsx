@@ -19,13 +19,18 @@ export default function index() {
   const { ref: LIVE_REF, inView: LIVE_INVIEW } = useInView({
     threshold: 0,
   });
+
   const { ref: CheckedBook_Ref, inView: ChekedBook_Inview } = useInView({
     threshold: 0,
   });
+
   const { ref: InfiniteScrollBook_Ref, inView: InfiniteScrollBook_Inview } =
     useInView({
       threshold: 0,
     });
+  const { ref: DownloadNow_Ref, inView: DownloadNow_Inview } = useInView({
+    threshold: 0,
+  });
   return (
     <>
       <Layout />
@@ -42,7 +47,7 @@ export default function index() {
       />
       <Bookmarks />
       <SlideComments />
-      <DownloadNow />
+      <DownloadNow wRef={DownloadNow_Ref} wInView={DownloadNow_Inview} />
       <Footer />
       <DownloadButton />
       <ErrorPage />

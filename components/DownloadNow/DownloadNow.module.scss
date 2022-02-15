@@ -31,18 +31,39 @@
       top: 80px;
       left: 121px;
     }
-    .speechBubble {
+    .speechBubbleOn {
       width: 213px;
       height: 47px;
       position: absolute;
       top: 135px;
       right: 180px;
+      transition-duration: 1.2s;
+      display: flex;
+      visibility: visible;
     }
-    .appDownload {
+    .speechBubbleOff {
+      width: 213px;
+      height: 47px;
+      position: absolute;
+      top: 80px;
+      right: 180px;
+      display: flex;
+      visibility: hidden;
+    }
+    .appDownloadOn {
       width: 257px;
       height: 70px;
       position: absolute;
-      top: 213px;
+      top: 200px;
+      right: 154px;
+      transition-duration: 1.2s;
+    }
+
+    .appDownloadOff {
+      width: 257px;
+      height: 70px;
+      position: absolute;
+      top: 170px;
       right: 154px;
     }
   }

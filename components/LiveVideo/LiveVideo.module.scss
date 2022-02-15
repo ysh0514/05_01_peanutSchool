@@ -42,10 +42,28 @@
     }
 
     .MediaContentWrapper {
-      width: 722px;
+      position: relative;
+      width: 750px;
+      height: 574px;
 
       .tabletImg {
+        position: absolute;
         width: 100%;
+      }
+      .tabletBackground {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 700px;
+        height: 526px;
+        background-color: grey;
+        border-radius: 15px;
+        .liveVideo {
+          width: 700px;
+          height: 526px;
+          border-radius: 15px;
+        }
       }
     }
   }
