@@ -39,20 +39,6 @@ export default function SlideComments() {
     }
   };
 
-  const aniIndexContentStyle = (aniIndex: number) => {
-    if (aniIndex === 0) {
-      return styles.logoFirst;
-    } else if (aniIndex === 1) {
-      return styles.logoSecond;
-    } else if (aniIndex === 2) {
-      return styles.logoThird;
-    } else if (aniIndex === 3) {
-      return styles.logoFourth;
-    } else if (aniIndex === 4) {
-      return styles.logoFifth;
-    }
-  };
-
   function useInterval(callback: HTMLDivElement | any, delay: number) {
     const savedCallback = useRef<HTMLDivElement | any>();
     useEffect(() => {
@@ -127,14 +113,14 @@ export default function SlideComments() {
       <div className={styles.overlayBlack}></div>
       <div className={styles.contentWrapper}>
         <div className={styles.arrowFlex}>
-          <div onClick={onPrevClick} className={styles.arrowContainer}>
+          <div onClick={onPrevClick} className={styles.arrowLeftContainer}>
             <img
               className={styles.leftArrowImg}
               src="/images/leftArrow.png"
               alt="왼쪽 화살표"
             />
           </div>
-          <div onClick={onNextClick} className={styles.arrowContainer}>
+          <div onClick={onNextClick} className={styles.arrowRightContainer}>
             <img
               className={styles.rightArrowImg}
               src="/images/rightArrow.png"
