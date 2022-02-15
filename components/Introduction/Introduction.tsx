@@ -4,7 +4,7 @@ import { InViewProps } from '../../utils/inViewType';
 import styles from './Introduction.module.scss';
 
 export default function Introduction({ wRef, wInView }: InViewProps) {
-  const [isAnimation, setIsAnimation] = useState(false);
+  const [isAnimation, setIsAnimation] = useState<boolean>(false);
 
   useEffect(() => {
     if (wInView) {
