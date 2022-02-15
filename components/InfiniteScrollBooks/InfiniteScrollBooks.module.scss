@@ -24,14 +24,52 @@
         line-height: 40px;
       }
     }
-    .InfiniteScrollWrapper {
-      margin-top: 90px;
-      display: flex;
-      justify-content: space-around;
-      .scrollBookImages {
-        width: 150px;
-        height: 200px;
+    .overflowBox {
+      // overflow: hidden;
+      .InfiniteScrollWrapper {
+        margin-top: 90px;
+        display: flex;
+
+        .scrollBookImages {
+          width: 150px;
+          height: 200px;
+          margin-right: 50px;
+        }
       }
     }
+  }
+}
+.slider {
+  overflow: hidden;
+}
+.slideBox {
+  display: flex;
+  width: calc(200px * 16);
+  animation: slide 10s linear infinite;
+  margin-top: 90px;
+
+  .scrollBookImages {
+    width: 150px;
+    margin-right: 50px;
+  }
+}
+// .slideItems {
+//   width: 300px;
+//   height: 100px;
+//   background-color: #2d2d2d;
+//   border: 2px solid #68c7df;
+//   box-sizing: border-box;
+//   font-size: 24px;
+//   color: #68c7df;
+//   line-height: 100px;
+//   text-align: center;
+// }
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 8));
   }
 }

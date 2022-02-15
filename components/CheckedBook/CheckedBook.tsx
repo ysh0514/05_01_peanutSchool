@@ -9,7 +9,7 @@ const checkedImages = [
     checkImageAlt: '체크 이미지1',
   },
   {
-    bookImageSrc: './images/img_book_2.png',
+    bookImageSrc: './images/scrollBookImg10.png',
     bookImageAlt: '책 이미지2',
     checkImageSrc: './images/checkImg2.png',
     checkImageAlt: '체크 이미지2',
