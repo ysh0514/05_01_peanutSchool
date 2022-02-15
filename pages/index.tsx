@@ -4,7 +4,6 @@ import Bookmarks from '../components/Bookmarks/Bookmarks';
 import CheckedBook from '../components/CheckedBook/CheckedBook';
 import DownloadButton from '../components/DownloadButton/DownloadButton';
 import DownloadNow from '../components/DownloadNow/DownloadNow';
-import ErrorPage from '../components/ErrorPage/ErrorPage';
 import Footer from '../components/Footer/Footer';
 import InfiniteScrollBooks from '../components/InfiniteScrollBooks/InfiniteScrollBooks';
 import Introduction from '../components/Introduction/Introduction';
@@ -63,7 +62,6 @@ export default function index() {
       <DownloadNow wRef={DownloadNow_Ref} wInView={DownloadNow_Inview} />
       <Footer />
       <DownloadButton />
-      <ErrorPage />
     </>
   );
 }
