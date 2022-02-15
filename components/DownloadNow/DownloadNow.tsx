@@ -5,7 +5,7 @@ import styles from './DownloadNow.module.scss';
 export default function DownloadNow({ wRef, wInView }: InViewProps) {
   const [isClick, setIsClick] = useState<boolean>(false);
   const [speechBubble, setSpeechBubble] = useState<boolean>(false);
-  const [isAnimation, setIsAnimation] = useState(false);
+  const [isAnimation, setIsAnimation] = useState<boolean>(false);
 
   useEffect(() => {
     if (wInView) {

@@ -3,7 +3,7 @@ import { InViewProps } from '../../utils/inViewType';
 import styles from "./AnyTime.module.scss";
 
 export default function AnyTime({ wRef, wInView }: InViewProps) {
-  const [isAnimation, setIsAnimation] = useState(false);
+  const [isAnimation, setIsAnimation] = useState<boolean>(false);
 
   useEffect(() => {
     if (wInView) {

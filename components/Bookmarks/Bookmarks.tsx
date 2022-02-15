@@ -3,7 +3,7 @@ import useScroll from '../../hooks/useScroll';
 import styles from './Bookmarks.module.scss';
 
 export default function Bookmarks() {
-  const scrollPosition = useScroll();
+  const scrollPosition: number = useScroll();
 
   return (
     <div className={styles.wrapper}>
