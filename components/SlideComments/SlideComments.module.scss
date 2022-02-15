@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .overlay {
@@ -52,6 +53,17 @@
   align-items: center;
   cursor: pointer;
   z-index: 5;
+}
+
+.arrowLeftContainer {
+  @extend .arrowContainer;
+  position: relative;
+  left: 10%;
+}
+.arrowRightContainer {
+  @extend .arrowContainer;
+  position: relative;
+  right: 10%;
 }
 
 .arrowImg {
