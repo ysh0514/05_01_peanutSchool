@@ -1,19 +1,26 @@
+import useScroll from '../../hooks/useScroll';
 import styles from './NavBar.module.scss';
 
 export default function NavBar() {
+  const scrollPosition: number = useScroll();
+  const isScroll: boolean = scrollPosition < 80;
+
   return (
-    <div className={styles.headerContainer}>
+    <div className={isScroll ? styles.headerContainer : styles.changeContainer}>
       <header className={styles.header}>
-        <img 
-          className={styles.logoImage} 
-          src="/images/header_logo.png" 
-          alt="땅콩스쿨 로고" 
-        />
-        {/* <img 
-          className={styles.logoImage} 
-          src="/images/header_dark_logo.png" 
-          alt="땅콩스쿨 로고" 
-        /> */}
+        {isScroll?
+          <img 
+            className={styles.logoImage} 
+            src="/images/header_logo.png" 
+            alt="땅콩스쿨 로고" 
+          /> 
+          :
+          <img 
+            className={styles.logoImage} 
+            src="/images/header_dark_logo.png" 
+            alt="땅콩스쿨 로고" 
+          />
+        }
         <ul className={styles.menuList}>
           <li className={styles.menuMargin}>
             도서 구매
