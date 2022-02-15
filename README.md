@@ -87,6 +87,7 @@ components
 | <img width="auto" src="https://user-images.githubusercontent.com/80146176/153054588-6194940a-a76d-4fde-a164-2efb3989d6e8.png"> | <img width="auto" src="https://user-images.githubusercontent.com/80146176/153054110-d7c4169e-3824-4903-8ca5-fc4aec044055.png"> |
 
 ## E2E Test
+- cypress를 이용해서 E2E 테스트 진행
 <img width="1440" alt="스크린샷 2022-02-16 오전 1 51 26" src="https://user-images.githubusercontent.com/91244500/154123766-e159a345-bf9e-4076-b167-e305a47f4995.png">
 
 
