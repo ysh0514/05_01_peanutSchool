@@ -21,7 +21,6 @@ export default function DownloadNow({ wRef, wInView }: InViewProps) {
     }
   }, [wInView]);
 
-  console.log(wInView);
   return (
     <>
       <section className={styles.downloadContainer} ref={wRef}>
