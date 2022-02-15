@@ -1,0 +1,58 @@
+@import '../../styles/variables.module.scss';
+
+@keyframes motion {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 762px;
+  position: relative;
+  > img {
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    z-index: -1000;
+  }
+  .imageText {
+    width: 1140px;
+    position: relative;
+    h1 {
+      width: 424px;
+      height: 247px;
+      font-size: $bigTitleFontSize;
+      line-height: 80px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .starImage {
+      position: absolute;
+      top: 65px;
+      left: -20px;
+      height: 52.18px;
+      width: 51.42px;
+    }
+    .lineImage {
+      position: absolute;
+      top: 155px;
+      width: 240px;
+      height: 11px;
+    }
+  }
+  .mouseImage {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 665px;
+    padding-bottom: 50px;
+    animation: 0.7s ease-in 0s infinite alternate none running motion;
+  }
+}
