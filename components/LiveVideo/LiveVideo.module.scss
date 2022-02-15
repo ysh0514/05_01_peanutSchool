@@ -19,6 +19,7 @@
 
   .contentWrapper {
     display: flex;
+    justify-content: space-between;
     width: 1140px;
     height: 548px;
 
@@ -40,7 +41,6 @@
     }
 
     .MediaContentWrapper {
-      margin-left: 110px;
       width: 722px;
 
       .tabletImg {

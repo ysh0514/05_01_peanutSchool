@@ -1,5 +1,26 @@
 import styles from './CheckedBook.module.scss';
 
+const checkedImages = [
+  {
+    bookImageSrc: './images/img_book_1.png',
+    bookImageAlt: '책 이미지1',
+    checkImageSrc: './images/checkImg1.png',
+    checkImageAlt: '체크 이미지1',
+  },
+  {
+    bookImageSrc: './images/img_book_2.png',
+    bookImageAlt: '책 이미지2',
+    checkImageSrc: './images/checkImg2.png',
+    checkImageAlt: '체크 이미지2',
+  },
+  {
+    bookImageSrc: './images/img_book_3.png',
+    bookImageAlt: '책 이미지3',
+    checkImageSrc: './images/checkImg3.png',
+    checkImageAlt: '체크 이미지3',
+  },
+];
+
 export default function CheckedBook() {
   return (
     <div className={styles.container}>
@@ -16,41 +37,23 @@ export default function CheckedBook() {
             직접 선정해요!
           </p>
         </div>
-        <div className={styles.rightContentsWrapper}>
-          <div className={styles.checkedImagesWrapper}>
-            <img
-              className={styles.checkedImage}
-              src="./images/check.png"
-              alt="체크 이미지"
-            />
-            <img
-              className={styles.checkedImage}
-              src="./images/check.png"
-              alt="체크 이미지"
-            />
-            <img
-              className={styles.checkedImage}
-              src="./images/check.png"
-              alt="체크 이미지"
-            />
-          </div>
-          <div className={styles.cardImagesWrapper}>
-            <img
-              className={styles.BookImage}
-              src="./images/img_book_1.png"
-              alt="책 이미지1"
-            />
-            <img
-              className={styles.BookImage}
-              src="./images/img_book_2.png"
-              alt="책 이미지2"
-            />
-            <img
-              className={styles.BookImage}
-              src="./images/img_book_3.png"
-              alt="책 이미지3"
-            />
-          </div>
+        <div className={styles.checkedImagesWrapper}>
+          {checkedImages.map((e) => {
+            return (
+              <div className={styles.CheckAndBookWrapper}>
+                <img
+                  className={styles.checkedImage}
+                  src={e.checkImageSrc}
+                  alt={e.checkImageAlt}
+                />
+                <img
+                  className={styles.BookImage}
+                  src={e.bookImageSrc}
+                  alt={e.bookImageAlt}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

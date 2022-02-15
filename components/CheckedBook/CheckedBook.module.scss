@@ -9,6 +9,7 @@
 
   .contentWrapper {
     display: flex;
+    justify-content: space-between;
     width: 1140px;
 
     .leftTextsWrapper {
@@ -25,27 +26,19 @@
         line-height: 40px;
       }
     }
-    .rightContentsWrapper {
-      margin-left: 156px;
+    .checkedImagesWrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 650px;
 
-      .checkedImagesWrapper {
-        display: flex;
-        justify-content: space-between;
-        width: 630px;
-
+      .CheckAndBookWrapper {
         .checkedImage {
-          width: 106px;
-          height: 94px;
+          width: 150px;
+          height: 100px;
         }
-      }
-
-      .cardImagesWrapper {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 33px;
-        width: 650px;
 
         .BookImage {
+          margin-top: 33px;
           width: 150px;
           height: 200px;
         }
