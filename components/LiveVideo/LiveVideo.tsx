@@ -1,8 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { InViewProps } from '../../utils/inViewType';
 import styles from './LiveVideo.module.scss';
 
-export default function LiveVideo({ wRef, wInView }: any) {
+export default function LiveVideo({ wRef, wInView }: InViewProps) {
+  const [isAnimation, setIsAnimation] = useState(false);
   const vidRef: any = useRef(null);
+
   const playVideo = () => {
     vidRef.current.play();
   };
@@ -13,8 +16,10 @@ export default function LiveVideo({ wRef, wInView }: any) {
 
   useEffect(() => {
     if (wInView) {
+      setIsAnimation(true);
       playVideo();
     } else {
+      setIsAnimation(false);
       pauseVideo();
     }
   }, [wInView]);
@@ -23,11 +28,11 @@ export default function LiveVideo({ wRef, wInView }: any) {
     <div ref={wRef} className={styles.container}>
       <div className={styles.backgroundStripe}></div>
       <div className={styles.contentWrapper}>
-        <div className={styles.leftTextsWrapper}>
-          <h3 className={styles.titleText}>
+        <div className={!isAnimation ? styles.leftTextsWrapper : styles.textTransition}>
+          <h3 className={!isAnimation ? styles.titleText : styles.titleTransform}>
             랜선 라이브 <br></br>북클래스
           </h3>
-          <p className={styles.descriptionText}>
+          <p className={!isAnimation ? styles.descriptionText : styles.descriptionTransform}>
             친구들과 함께<br></br>
             그림 그리기 , 퀴즈풀기.
             <br></br>

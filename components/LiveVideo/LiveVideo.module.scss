@@ -24,23 +24,6 @@
     width: 1140px;
     height: 548px;
 
-    .leftTextsWrapper {
-      margin-top: 128px;
-
-      .titleText {
-        font-size: $titleFontSize;
-        font-weight: 700;
-        line-height: 70px;
-      }
-
-      .descriptionText {
-        margin-top: 50px;
-        font-size: $descriptionFontSize;
-        font-weight: 400;
-        line-height: 40px;
-      }
-    }
-
     .MediaContentWrapper {
       position: relative;
       width: 750px;
@@ -67,4 +50,49 @@
       }
     }
   }
+}
+
+.leftTextsWrapper {
+  margin-top: 128px;
+}
+
+.titleText {
+  font-size: $titleFontSize;
+  font-weight: 700;
+  line-height: 70px;
+  position: relative;
+  opacity: 0;
+}
+
+.descriptionText {
+  margin-top: 50px;
+  font-size: $descriptionFontSize;
+  font-weight: 400;
+  line-height: 40px;
+  position: relative;
+  opacity: 0;
+}
+
+.textTransition {
+  @extend .leftTextsWrapper;
+  :first-child {
+    transition: 1s;
+  }
+  :last-child {
+    transition: 1.5s;
+  }
+}
+
+.titleTransform {
+  @extend .titleText;
+  top: 100px;
+  opacity: 1;
+  transform: translateY(-100px);
+}
+
+.descriptionTransform {
+  @extend .descriptionText;
+  top: 120px;
+  opacity: 1;
+  transform: translateY(-120px);
 }
