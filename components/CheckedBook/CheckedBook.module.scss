@@ -11,8 +11,10 @@
     display: flex;
     justify-content: space-between;
     width: 1140px;
+
     .rightContetWrapper {
       width: 650px;
+
       .overflowWrapper {
         position: absolute;
         overflow: hidden;
@@ -45,6 +47,7 @@
 
         .CheckAndBookWrapper {
           width: 150px;
+
           .checkedImage {
             width: 150px;
             height: 100px;
@@ -84,9 +87,11 @@
 
 .leftTextTransition {
   @extend .leftTextsWrapper;
+
   :first-child {
     transition: 1s;
   }
+
   :last-child {
     transition: 1.5s;
   }
