@@ -1,29 +1,9 @@
 import styles from './CheckedBook.module.scss';
 import { useState, useEffect } from 'react';
-
-const checkedImages = [
-  {
-    bookImageSrc: './images/img_book_1.png',
-    bookImageAlt: '책 이미지1',
-    checkImageSrc: './images/checkImg1.png',
-    checkImageAlt: '체크 이미지1',
-  },
-  {
-    bookImageSrc: './images/img_book_2.png',
-    bookImageAlt: '책 이미지2',
-    checkImageSrc: './images/checkImg2.png',
-    checkImageAlt: '체크 이미지2',
-  },
-  {
-    bookImageSrc: './images/img_book_3.png',
-    bookImageAlt: '책 이미지3',
-    checkImageSrc: './images/checkImg3.png',
-    checkImageAlt: '체크 이미지3',
-  },
-];
+import { checkedImages } from '../../constants/constants';
 
 export default function CheckedBook({ wRef, wInView }: any) {
-  const [isAnimation, setIsAnimation] = useState(false);
+  const [isAnimation, setIsAnimation] = useState<boolean>(false);
 
   useEffect(() => {
     if (wInView) {
