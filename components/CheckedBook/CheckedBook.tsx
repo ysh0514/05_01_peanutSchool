@@ -1,5 +1,6 @@
-import styles from './CheckedBook.module.scss';
 import { useState, useEffect } from 'react';
+import { InViewProps } from '../../utils/inViewType';
+import styles from './CheckedBook.module.scss';
 
 const checkedImages = [
   {
@@ -22,7 +23,7 @@ const checkedImages = [
   },
 ];
 
-export default function CheckedBook({ wRef, wInView }: any) {
+export default function CheckedBook({ wRef, wInView }: InViewProps) {
   const [isAnimation, setIsAnimation] = useState(false);
 
   useEffect(() => {
@@ -36,12 +37,12 @@ export default function CheckedBook({ wRef, wInView }: any) {
   return (
     <div className={styles.container} ref={wRef}>
       <div className={styles.contentWrapper}>
-        <div className={styles.leftTextsWrapper}>
-          <h3 className={styles.titleText}>
+        <div className={!isAnimation ? styles.leftTextsWrapper : styles.leftTextTransition}>
+          <h3 className={!isAnimation ? styles.titleText : styles.titleTransform}>
             교육 전문가들이<br></br>
             선정한 도서
           </h3>
-          <p className={styles.descriptionText}>
+          <p className={!isAnimation ? styles.descriptionText : styles.descriptionTransform}>
             호두랩스의 교육 전문가들이<br></br>
             교과 수록 , 초등 필수 독서 등<br></br>
             아동 교육에 적합한 도서를<br></br>
