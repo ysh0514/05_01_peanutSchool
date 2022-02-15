@@ -1,0 +1,19 @@
+@import '../../styles/variables.module.scss';
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .backButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 90%;
+    height: 50px;
+    background-color: $darkGrayBgColor;
+    background-color: gray;
+    border: none;
+    cursor: pointer;
+  }
+}
