@@ -1,0 +1,47 @@
+@import '../../styles/variables.module.scss';
+
+.downloadContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  > h1 {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 70px;
+    margin-bottom: 100px;
+  }
+  .couponWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .coupon {
+      width: 1140px;
+      height: 449px;
+    }
+    .couponText {
+      width: 437px;
+      height: 249px;
+      position: absolute;
+      top: 80px;
+      left: 121px;
+    }
+    .speechBubble {
+      width: 213px;
+      height: 47px;
+      position: absolute;
+      top: 135px;
+      right: 180px;
+    }
+    .appDownload {
+      width: 257px;
+      height: 70px;
+      position: absolute;
+      top: 213px;
+      right: 154px;
+    }
+  }
+}
