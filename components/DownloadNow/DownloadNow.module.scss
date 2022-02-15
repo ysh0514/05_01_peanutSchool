@@ -7,12 +7,6 @@
   align-items: center;
   padding-top: 150px;
   position: relative;
-  > h1 {
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 70px;
-    margin-bottom: 100px;
-  }
   .couponWrapper {
     display: flex;
     flex-direction: column;
@@ -67,4 +61,21 @@
       right: 154px;
     }
   }
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 70px;
+  margin-bottom: 100px;
+  position: relative;
+  opacity: 0;
+}
+
+.titleTransform {
+  @extend .title;
+  top: 100px;
+  opacity: 1;
+  transition: 1s;
+  transform: translateY(-100px);
 }
