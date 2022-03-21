@@ -1,0 +1,88 @@
+@import '../../styles/variables.module.scss';
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1140px;
+  color: $fontColor;
+  padding: 60px 0px;
+}
+
+.company {
+  font-weight: bold;
+  font-size: $smallFontSize;
+  line-height: 28px;
+  opacity: 0.8;
+}
+
+.grid {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.companyInfo {
+  font-size: $verySamllFontSize;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.companySearch {
+  cursor: pointer;
+  border-bottom: 1.5px solid $fontColor;
+  margin-left: 5px;
+}
+
+.list {
+  &:last-child {
+    margin-top: 20px;
+  }
+}
+
+.information {
+  font-size: $smallFontSize;
+  line-height: 28px;
+}
+
+.infoList {
+  margin-bottom: 10px;
+}
+
+.infoItem {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.infoCursur {
+  cursor: pointer;
+}
+
+.privateInfo {
+  @extend .infoItem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.iconList {
+  display: flex;
+  margin-top: 30.5px;
+}
+
+.icon {
+  cursor: pointer;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: 1.5px solid #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 21.1px;
+}

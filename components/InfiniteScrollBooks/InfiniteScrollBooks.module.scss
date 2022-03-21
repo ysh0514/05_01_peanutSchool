@@ -1,0 +1,107 @@
+@import '../../styles/variables.module.scss';
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 8));
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 868px;
+
+  .contentContainer {
+    width: 100%;
+    text-align: center;
+    .overflowBox {
+      .InfiniteScrollWrapper {
+        margin-top: 90px;
+        display: flex;
+
+        .scrollBookImages {
+          width: 150px;
+          height: 200px;
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+}
+
+.topTextWrapper {
+  text-align: center;
+}
+
+.titleText {
+  font-size: $titleFontSize;
+  font-weight: 700;
+  line-height: 70px;
+  position: relative;
+  opacity: 0;
+}
+
+.descriptionText {
+  margin-top: 50px;
+  font-size: $descriptionFontSize;
+  font-weight: 400;
+  line-height: 40px;
+  position: relative;
+  opacity: 0;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.nonSlideBox {
+  display: flex;
+  width: calc(200px * 16);
+  margin-top: 90px;
+
+  .scrollBookImages {
+    width: 150px;
+    margin-right: 50px;
+  }
+}
+
+.slideBox {
+  display: flex;
+  width: calc(200px * 16);
+  animation: slide 14s linear infinite;
+  margin-top: 90px;
+
+  .scrollBookImages {
+    width: 150px;
+    margin-right: 50px;
+  }
+}
+
+.topTextTransition {
+  @extend .topTextWrapper;
+  :first-child {
+    transition: 1s;
+  }
+  :last-child {
+    transition: 1.5s;
+  }
+}
+
+.titleTransform {
+  @extend .titleText;
+  top: 100px;
+  opacity: 1;
+  transform: translateY(-100px);
+}
+
+.descriptionTransform {
+  @extend .descriptionText;
+  top: 120px;
+  opacity: 1;
+  transform: translateY(-120px);
+}

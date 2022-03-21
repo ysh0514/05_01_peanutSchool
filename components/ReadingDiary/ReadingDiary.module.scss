@@ -1,0 +1,60 @@
+@import '../../styles/variables.module.scss';
+
+.diaryContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  background-color: $darkGrayBgColor;
+  .diaryImage {
+    width: 1139px;
+    height: 100%;
+    margin-top: 100px;
+  }
+}
+
+.diaryWrapper {
+  width: 1140px;
+  text-align: center;
+}
+
+.title {
+  font-size: $titleFontSize;
+  font-weight: bold;
+  line-height: 70px;
+  position: relative;
+  opacity: 0;
+}
+
+.text {
+  font-size: $descriptionFontSize;
+  line-height: 40px;
+  margin-top: 50px;
+  position: relative;
+  opacity: 0;
+}
+
+.textTransition {
+  @extend .diaryWrapper;
+  :first-child {
+    transition: 1s;
+  }
+  :last-child {
+    transition: 1.5s;
+  }
+}
+
+.titleTransform {
+  @extend .title;
+  top: 100px;
+  opacity: 1;
+  transform: translateY(-100px);
+}
+
+.textTransform {
+  @extend .text;
+  top: 120px;
+  opacity: 1;
+  transform: translateY(-120px);
+}

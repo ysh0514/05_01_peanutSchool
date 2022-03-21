@@ -1,0 +1,112 @@
+@import '../../styles/variables.module.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 647px;
+  background-color: $darkGrayBgColor;
+
+  .contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+
+    .rightContetWrapper {
+      width: 650px;
+
+      .overflowWrapper {
+        position: absolute;
+        overflow: hidden;
+        width: 650px;
+        height: 100px;
+
+        .hiddenBox {
+          position: absolute;
+          width: 650px;
+          height: 100px;
+          z-index: 1000;
+          background-color: $darkGrayBgColor;
+        }
+
+        .visibleBox {
+          position: absolute;
+          width: 650px;
+          height: 100px;
+          z-index: 1000;
+          background-color: $darkGrayBgColor;
+          transform: translateX(100%);
+          transition-duration: 2s;
+          transition-timing-function: linear;
+        }
+      }
+
+      .checkedImagesWrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .CheckAndBookWrapper {
+          width: 150px;
+
+          .checkedImage {
+            width: 150px;
+            height: 100px;
+          }
+
+          .BookImage {
+            margin-top: 33px;
+            width: 150px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.leftTextsWrapper {
+  text-align: start;
+}
+
+.titleText {
+  font-size: $titleFontSize;
+  font-weight: 700;
+  line-height: 70px;
+  position: relative;
+  opacity: 0;
+}
+
+.descriptionText {
+  margin-top: 50px;
+  font-size: $descriptionFontSize;
+  font-weight: 400;
+  line-height: 40px;
+  position: relative;
+  opacity: 0;
+}
+
+.leftTextTransition {
+  @extend .leftTextsWrapper;
+
+  :first-child {
+    transition: 1s;
+  }
+
+  :last-child {
+    transition: 1.5s;
+  }
+}
+
+.titleTransform {
+  @extend .titleText;
+  top: 100px;
+  opacity: 1;
+  transform: translateY(-100px);
+}
+
+.descriptionTransform {
+  @extend .descriptionText;
+  top: 120px;
+  opacity: 1;
+  transform: translateY(-120px);
+}

@@ -1,0 +1,150 @@
+@import '../../styles/variables.module.scss';
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $darkGrayBgColor;
+}
+
+.container {
+  width: 1140px;
+  height: 945px;
+  color: $fontColor;
+  background-color: $darkGrayBgColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  padding-top: 150px;
+  font-weight: bold;
+  font-size: $titleFontSize;
+  line-height: 70px;
+  margin-bottom: 80px;
+  position: relative;
+  opacity: 0;
+}
+
+.titleTransform {
+  @extend .title;
+  top: 100px;
+  opacity: 1;
+  transition: 0.8s;
+  transform: translateY(-100px);
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 20px;
+}
+
+.leftToRight {
+  @extend .cardWrapper;
+  :first-child {
+    transition: 0.8s;
+  }
+  :nth-child(2) {
+    transition: 1.3s;
+  }
+  :last-child {
+    transition: 1.8s;
+  }
+}
+
+.rightToLeft {
+  @extend .cardWrapper;
+  :first-child {
+    transition: 2.8s;
+  }
+  :nth-child(2) {
+    transition: 2.3s;
+  }
+  :last-child {
+    transition: 1.8s;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  opacity: 0;
+}
+
+.bottomToTop {
+  @extend .card;
+  top: 100px;
+  opacity: 1;
+  transform: translateY(-100px);
+}
+
+.topToBottom {
+  @extend .card;
+  top: -100px;
+  opacity: 1;
+  transform: translateY(100px);
+}
+
+.string {
+  width: 54px;
+  height: 152px;
+  z-index: 1;
+  position: relative;
+}
+
+.leftString {
+  @extend .string;
+  right: 30px;
+}
+
+.centerString {
+  @extend .string;
+  right: 15px;
+}
+
+.rightStirng {
+  @extend .string;
+  right: 30px;
+}
+
+.cardImage {
+  position: relative;
+  bottom: 87px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  bottom: 535px;
+  right: 20px;
+}
+
+.icon {
+  width: 76px;
+  height: 76px;
+}
+
+.cardTitle {
+  font-size: $bigFontSize;
+  font-weight: bold;
+  margin-top: 50px;
+  line-height: 32px;
+}
+
+.description {
+  margin-top: 30px;
+  font-weight: normal;
+  font-weight: normal;
+  font-size: $normalFontSize;
+  line-height: 36px;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,82 @@
+@import '../../styles/variables.module.scss';
+
+.downloadContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  position: relative;
+  .couponWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 25px;
+    .coupon {
+      width: 1140px;
+      height: 449px;
+    }
+    .couponText {
+      width: 437px;
+      height: 249px;
+      position: absolute;
+      top: 80px;
+      left: 121px;
+    }
+    .speechBubbleOn {
+      width: 213px;
+      height: 47px;
+      position: absolute;
+      top: 135px;
+      right: 180px;
+      transition-duration: 1.2s;
+      display: flex;
+      visibility: visible;
+    }
+    .speechBubbleOff {
+      width: 213px;
+      height: 47px;
+      position: absolute;
+      top: 80px;
+      right: 180px;
+      display: flex;
+      visibility: hidden;
+    }
+    .appDownloadOn {
+      width: 257px;
+      height: 70px;
+      position: absolute;
+      top: 200px;
+      right: 154px;
+      transition-duration: 1.2s;
+      cursor: pointer;
+    }
+
+    .appDownloadOff {
+      width: 257px;
+      height: 70px;
+      position: absolute;
+      top: 170px;
+      right: 154px;
+    }
+  }
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 70px;
+  margin-bottom: 100px;
+  position: relative;
+  opacity: 0;
+}
+
+.titleTransform {
+  @extend .title;
+  top: 100px;
+  opacity: 1;
+  transition: 1s;
+  transform: translateY(-100px);
+}
